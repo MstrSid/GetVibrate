@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="48dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLottie"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="14dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:cropToPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="patternone.json"
+            app:lottie_loop="true" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPatterns"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="14dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvLottie">
+
+        <Spinner
+            android:id="@+id/spinnerPatterns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:entries="@array/patterns" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="14dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvPatterns">
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:justificationMode="inter_word"
+            android:text="@string/pattern_one_description"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="484dp" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/phubBack"
+        android:clickable="true"
+        android:contentDescription="@string/vibrate"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/fabStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/ic_start" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/phubBack"
+        android:clickable="true"
+        android:contentDescription="@string/stop"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/ic_stop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

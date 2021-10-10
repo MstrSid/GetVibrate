@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="patterns">
+        <item>Warm up</item>
+        <item>Let\'s fun</item>
+        <item>Oh God</item>
+    </string-array>
+</resources>

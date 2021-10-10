@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Get Vibrate</string>
+    <string name="stop">Stop</string>
+    <string name="vibrate">Let\'s GO :)</string>
+    <string name="pattern_one_description">Short and delicate vibration.
+        Allows you to warm up and relax in front of real fun.
+        A good option to start a pleasant evening :)
+    </string>
+    <string name="pattern_two_description">Second level. Longer and more interesting vibration
+        with an arrhythmic pattern.
+        Perhaps the most important thing is to get a pleasant sensation without busting vibration.
+        Let the evening get hotter :)
+    </string>
+    <string name="pattern_three_description">Third level. Maximum, almost continuous vibration.
+        For those who do not compromise and want to reach the peak of sensations as soon as possible.
+        Well, a good choice, but take care of the battery :)
+    </string>
+</resources>
